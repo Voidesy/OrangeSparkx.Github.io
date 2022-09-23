@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+    <head>
+         <!-- Link to the Responsive Columns CSS -->
+        <link rel="stylesheet" type="text/css" href="css/r-c-min.css" />
+
+        <!-- Link to your general styles -->
+        <link rel="stylesheet" type="text/css" href="css/column-styles.css" />
+
+        <style>
+            p, div {
+                color: beige;
+            }
+
+            button{
+                margin: 10px;
+                font-size: larger;
+            }
+
+            h1 {
+            text-align: center;
+            color: aqua;
+            }
+
+            .formulas p{
+                font-weight: bold;
+                font-size: 30px;
+                color: black;
+            }  
+            
+            .buttonbox{
+                margin-top: 20px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .red {
+                background:#f97171;
+            }
+            .orange {
+                background:#f99e50;
+            }
+            .yellow {
+                background:#f5d55f;
+            }
+
+        </style>
+        <script>
+            
+            var pi = 3.14
+
+            function clickCalculate(){
+                var success = verifyInput()
+
+                if(success==true) {
+                    doCalculation()
+                }
+                else{
+                    showError()
+                }
+            }
+
+            function clearz(){
+
+                document.getElementById("radius").value = null
+                document.getElementById("diam").value = null
+                document.getElementById("cf").value = null
+            }
+
+            function verifyInput(){
+                var r = document.getElementById("radius").value
+                var d = document.getElementById("diam").value
+                var c = document.getElementById("cf").value
+
+                var countInputs = 0;
+                
+                if(r){
+                    countInputs++       
+                }
+
+                if(d){
+                    countInputs++       
+                }
+
+                if(c){
+                    countInputs++       
+                }
+
+                if(countInputs == 1){
+                    return true
+                }
+                
+                return false
+            }
+
+            function doCalculation(){
+                var r = document.getElementById("radius").value
+                var d = document.getElementById("diam").value
+                var c = document.getElementById("cf").value
+
+                
+                if(r){
+                      d = r * 2
+                      c = d * pi
+                      
+                      displayAwnsers(r,d,c)
+                }
+
+                if(d){
+                   r = d / 2
+                   c = d * pi
+
+                   displayAwnsers(r,d,c)
+                }
+
+                if(c){
+                     d = c / pi
+                     r = d / 2
+                     
+                     displayAwnsers(r,d,c)
+                }
+
+               
+            }
+
+            function displayAwnsers(r,d,c){
+                document.getElementById("radius").value = r
+                document.getElementById("diam").value = d
+                document.getElementById("cf").value = c
+            }
+
+            function showError(){
+                alert("Make sure there is only one value entered above");
+            }
+        </script>
+    </head>
+
+<body style="background-color:black;">
+    <h1>Fancy Calulator</h1>
+    <p>Enter one value to calculate the others</p>
+    <r-c join>
+        <c1-1 sm1-3 class="red formulas">
+            
+            <p>Radius</p>  
+            <input type="text" id="radius"> 
+        </c1-1>
+        <c1-1 sm1-3 class="orange formulas">
+            <p>Diameter</p>
+            <input type="text" id="diam">
+        </c1-1>
+        <c1-1 sm1-3 class="yellow formulas">
+            <p>Circumfrence</p>
+            <input type="text" id="cf">
+        </c1-1>
+    </r-c>
+<div class="buttonbox">
+    <button onclick="clickCalculate()">Calculate</button>
+    <button onclick="clearz()">Clear</button>
+</div>
+    
+</body>
+
+
+
+</html>
