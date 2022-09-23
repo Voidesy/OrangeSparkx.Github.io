@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            p, div {
+                color: beige;
+            }
+
+            #answer{
+                color:orange;
+                font-weight: bold;
+                font-size: 20px;
+            }
+
+            h1 {
+            text-align: center;
+            color: aqua;
+            }
+        </style>
+        <script>
+            
+            var pi = 3.14
+
+            function foo(){
+
+                var c = document.getElementById('circumfrence').value
+
+                document.getElementById("answer").innerHTML = c/pi;
+
+            }
+
+            function getCircumfrence(){
+
+               var d = document.getElementById('diameter').value
+
+              document.getElementById("answer").innerHTML = d*pi;
+
+            }
+            
+        </script>
+    </head>
+
+<body style="background-color:black;">
+<h1>Hello World</h1>
+<p style="text-align: center">I'm hosted with GitHub Pages iuhg ouyhg uoyhg.</p>
+
+<p>Enter Circumference:</p>
+<p>(formula = c / pi)</p>
+<input type="text" id="circumfrence">
+<button type="button" onclick="foo()">Click to get diameter.</button>
+
+<p>Enter diameter:</p>
+<p>(formula = d * pi)</p>
+<input type="text" id="diameter">
+<button type="button" onclick="getCircumfrence()">Click to get Circumfrence.</button>
+
+<p></p>
+<div>
+    <span>Answer:</span>
+    <span id="answer"></span>
+</div>
+</body>
+
+
+
+</html>
