@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+         <!-- Link to the Responsive Columns CSS -->
+        <link rel="stylesheet" type="text/css" href="/css/r-c-min.css" />
+
+        <!-- Link to your general styles -->
+        <link rel="stylesheet" type="text/css" href="/css/column-styles.css" />
+
+        <link rel="stylesheet" type="text/css" href="/css/main.css" />
+
+        <script src="/js/header.js" type="text/javascript" defer></script>
+        <script src="/js/footer.js" type="text/javascript" defer></script>
+
+        <style>
+            
+
+            .answers{
+                color: orange;
+                font-size:x-large;
+            }
+
+            .answerBox{
+                text-align: center;
+                display:none;
+            }
+
+            .formulas p{
+                font-weight: bold;
+                font-size: 30px;
+                color: black;
+            }  
+            
+            .buttonbox{
+                margin-top: 20px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+        
+
+        </style>
+
+        <script src="../js/CircumferenceCalc.js"></script>  
+    </head>
+
+<body>
+    <header-component></header-component>
+    <main>
+       
+        <h1>Circumference Calculator</h1>
+        <p>Enter one value to calculate the others</p>
+        <r-c join>
+            <c1-1 sm1-3 class="red formulas">
+                
+                <p>Radius</p>  
+                <input type="text" id="radius"> 
+            </c1-1>
+            <c1-1 sm1-3 class="orange formulas">
+                <p>Diameter</p>
+                <input type="text" id="diam">
+            </c1-1>
+            <c1-1 sm1-3 class="yellow formulas">
+                <p>Circumfrence</p>
+                <input type="text" id="cf">
+            </c1-1>
+        </r-c>
+      
+        <div class="answerBox" id="answerBox">
+            <p>Formulas Used:</p>
+            <p id="f1" class="answers"></p>
+            <p id="f2" class="answers"></p>
+        </div>
+       
+    <div class="buttonbox">
+        <button onclick="clickCalculate()">Calculate</button>
+        <button onclick="clearz()">Clear</button>
+    </div>
+    </main>
+    <footer-component></footer-component>
+    
+</body>
+
+
+
+</html>

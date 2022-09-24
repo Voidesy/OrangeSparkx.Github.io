@@ -1,0 +1,59 @@
+body{
+    background-color:black;
+}
+
+p, div {
+    color: beige;
+}
+
+button{
+    margin: 10px;
+    font-size: larger;
+}
+
+h1 {
+text-align: center;
+color: aqua;
+}
+
+h2 {
+text-align: center;
+color: white;
+}
+
+.red {
+    background:#f97171;
+}
+.orange {
+    background:#f99e50;
+}
+.yellow {
+    background:#f5d55f;
+}
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html,
+  body {
+    height: 100%;
+  }
+  
+  body {
+    color: #333;
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+  }
+main {
+    flex: 1 0 auto;
+  }
+
+  sitename{
+      color: darkgoldenrod;
+}
