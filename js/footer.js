@@ -43,9 +43,9 @@ footerTemplate.innerHTML = `
   </style>
   <footer>
     <ul>
-    <li><a href="/index.html">Home</a></li>
-    <li><a href="/calcs/standard.html">Standard</a></li>
-    <li><a href="/calcs/circumference-calc.html">Circumfrence</a></li>
+    <li><a href="/OrangeSparkx.Github.io/index.html">Home</a></li>
+    <li><a href="/OrangeSparkx.Github.io/calcs/standard.html">Standard</a></li>
+    <li><a href="/OrangeSparkx.Github.io/calcs/circumference-calc.html">Circumfrence</a></li>
     <li><a href="#">Not made</a></li>
     </ul>
     <ul class="social-row">
