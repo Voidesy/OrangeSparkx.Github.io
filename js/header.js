@@ -37,9 +37,9 @@ headerTemplate.innerHTML = `
   <header><div class="sitename" style="color: darkgoldenrod; margin: 15px; font-size:30px">Sparkx Calculators</div>
     <nav>
       <ul>
-        <li><a href="/index.html">Home</a></li>
-        <li><a href="/calcs/standard.html">Standard(not made)</a></li>
-        <li><a href="/calcs/circumference-calc.html">Circumfrence</a></li>
+        <li><a href="/OrangeSparkx.Github.io/index.html">Home</a></li>
+        <li><a href="/OrangeSparkx.Github.io/calcs/standard.html">Standard(not made)</a></li>
+        <li><a href="/OrangeSparkx.Github.io/calcs/circumference-calc.html">Circumfrence</a></li>
         <li><a href="#">Not made</a></li>
       </ul>
     </nav>
